@@ -13,17 +13,25 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/login.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!-- Mulish -->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    {{-- Font awesome --}}
-    {{-- <link rel="" href="path/to/font-awesome/css/font-awesome.min.css"> --}}
+
+    <!-- {{-- Font awesome --}} -->
+    <link rel="" href="path/to/font-awesome/css/font-awesome.min.css">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <!-- Layout Login -->
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+
+
 </head>
 <body class ="bg-gray-200 text-gray-800 antialiased font-sans">
     <div id="app">
