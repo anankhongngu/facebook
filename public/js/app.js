@@ -1948,7 +1948,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'Nav'
+});
 
 /***/ }),
 
@@ -2200,6 +2218,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2210,7 +2230,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      posts: null
+      posts: [],
+      loading: true
     };
   },
   mounted: function mounted() {
@@ -2218,8 +2239,10 @@ __webpack_require__.r(__webpack_exports__);
 
     axios.get('/api/posts').then(function (res) {
       _this.posts = res.data;
+      _this.loading = false;
     })["catch"](function (error) {
       console.log('Unable to fetch posts');
+      _this.loading = false;
     });
   }
 });
@@ -37934,7 +37957,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "ml-2 relative" }, [
+            _c("div", { staticClass: "ml-4 relative" }, [
               _c(
                 "div",
                 {
@@ -37994,13 +38017,16 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "w-2/4 flex justify-between items-center h-full px-8" },
+        {
+          staticClass:
+            "w-2/4 flex justify-between items-center h-full px-8 box_hover-icon"
+        },
         [
           _c(
             "router-link",
             {
               staticClass:
-                "h-full border-blue-600 flex items-center border-b-2 ",
+                "w-32 h-full justify-center hover-icon border-blue-600 flex items-center border-b-2 ",
               attrs: { to: "/" }
             },
             [
@@ -38009,7 +38035,7 @@ var render = function() {
                 {
                   staticStyle: {
                     width: "32px",
-                    "enable-background": "new 0 0 426.667 426.667"
+                    "enable-background": "new 0 0 476.912 476.912"
                   },
                   attrs: {
                     version: "1.1",
@@ -38018,17 +38044,17 @@ var render = function() {
                     "xmlns:xlink": "http://www.w3.org/1999/xlink",
                     x: "0px",
                     y: "0px",
-                    viewBox: "0 0 426.667 426.667",
+                    viewBox: "0 0 476.912 476.912",
                     "xml:space": "preserve"
                   }
                 },
                 [
                   _c("g", [
                     _c("g", [
-                      _c("polygon", {
+                      _c("path", {
                         attrs: {
-                          points:
-                            "213.333,32 0,224 64,224 64,394.667 170.667,394.667 170.667,266.667 256,266.667 256,394.667 362.667,394.667 \n\t\t\t\t\t\t\t362.667,224 426.667,224 \t\t"
+                          d:
+                            "M461.776,209.408L249.568,4.52c-6.182-6.026-16.042-6.026-22.224,0L15.144,209.4c-3.124,3.015-4.888,7.17-4.888,11.512\n\t\t\t\t\t\tc0,8.837,7.164,16,16,16h28.2v224c0,8.837,7.163,16,16,16h112c8.837,0,16-7.163,16-16v-128h80v128c0,8.837,7.163,16,16,16h112\n\t\t\t\t\t\tc8.837,0,16-7.163,16-16v-224h28.2c4.338,0,8.489-1.761,11.504-4.88C468.301,225.678,468.129,215.549,461.776,209.408z\n\t\t\t\t\t\t M422.456,220.912c-8.837,0-16,7.163-16,16v224h-112v-128c0-8.837-7.163-16-16-16h-80c-8.837,0-16,7.163-16,16v128h-112v-224\n\t\t\t\t\t\tc0-8.837-7.163-16-16-16h-28.2l212.2-204.88l212.28,204.88H422.456z"
                         }
                       })
                     ])
@@ -38041,7 +38067,8 @@ var render = function() {
           _c(
             "router-link",
             {
-              staticClass: "h-full border-white flex items-center border-b-2",
+              staticClass:
+                " w-32 justify-center h-full hover-icon border-white flex items-center border-b-2",
               attrs: { to: "/" }
             },
             [
@@ -38050,7 +38077,7 @@ var render = function() {
                 {
                   staticStyle: {
                     width: "32px",
-                    "enable-background": "new 0 0 512 512"
+                    "enable-background": "new 0 0 490.667 490.667"
                   },
                   attrs: {
                     version: "1.1",
@@ -38059,28 +38086,74 @@ var render = function() {
                     "xmlns:xlink": "http://www.w3.org/1999/xlink",
                     x: "0px",
                     y: "0px",
-                    viewBox: "0 0 512 512",
+                    viewBox: "0 0 490.667 490.667",
                     "xml:space": "preserve"
                   }
                 },
                 [
                   _c("g", [
                     _c("g", [
-                      _c("g", [
-                        _c("path", {
-                          attrs: {
-                            d:
-                              "M234.071,471.132H60.391c-6.453,0-12.333-2.991-16.135-8.207c-3.803-5.218-4.85-11.736-2.874-17.883\n\t\t\t\t\t\t\t\tc19.732-61.346,79.908-104.191,146.336-104.191c30.909,0,60.591,9.308,85.838,26.916c9.043,6.307,21.485,4.09,27.795-4.953\n\t\t\t\t\t\t\t\tc6.306-9.043,4.089-21.486-4.954-27.794c-12.498-8.717-25.85-15.828-39.817-21.257c18.583-16.896,30.911-40.555,33.053-67.048\n\t\t\t\t\t\t\t\tc28.177-27.448,65.111-42.488,104.704-42.488c30.909,0,60.591,9.308,85.838,26.916c9.043,6.307,21.486,4.09,27.795-4.953\n\t\t\t\t\t\t\t\tc6.306-9.043,4.089-21.486-4.954-27.794c-12.498-8.717-25.85-15.828-39.817-21.257c20.499-18.638,33.386-45.506,33.386-75.328\n\t\t\t\t\t\t\t\tC496.586,45.673,450.913,0,394.774,0c-56.14,0-101.812,45.673-101.812,101.813c0,29.701,12.784,56.473,33.139,75.102\n\t\t\t\t\t\t\t\tc-2.785,1.072-5.55,2.212-8.295,3.42c-12.492,5.497-24.241,12.245-35.162,20.183c-15.068-37.415-51.746-63.893-94.49-63.893\n\t\t\t\t\t\t\t\tc-56.14,0-101.812,45.673-101.812,101.813c0,29.614,12.71,56.316,32.96,74.938c-54.148,20.292-98.053,63.87-115.927,119.444\n\t\t\t\t\t\t\t\tc-5.928,18.431-2.788,37.976,8.616,53.623c11.402,15.645,29.042,24.618,48.401,24.618h173.68\n\t\t\t\t\t\t\t\tc11.026,0,19.963-8.938,19.963-19.963S245.096,471.132,234.071,471.132z M394.775,39.926c34.124,0,61.886,27.762,61.886,61.886\n\t\t\t\t\t\t\t\ts-27.762,61.886-61.886,61.886c-34.124,0-61.886-27.762-61.886-61.886S360.651,39.926,394.775,39.926z M188.155,176.55\n\t\t\t\t\t\t\t\tc34.124,0,61.886,27.762,61.886,61.886s-27.762,61.886-61.886,61.886s-61.886-27.762-61.886-61.886\n\t\t\t\t\t\t\t\tS154.031,176.55,188.155,176.55z"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("path", {
-                          attrs: {
-                            d:
-                              "M503.217,326.082c-8.965-6.418-21.436-4.354-27.853,4.612l-98.4,137.447c-2.687,3.116-6.055,3.789-7.859,3.909\n\t\t\t\t\t\t\t\tc-1.857,0.127-5.463-0.114-8.555-3.057l-63.703-61.168c-7.954-7.638-20.593-7.379-28.226,0.573\n\t\t\t\t\t\t\t\tc-7.637,7.952-7.38,20.59,0.572,28.226l63.767,61.228c9.55,9.091,22.298,14.149,35.414,14.149c1.127,0,2.257-0.037,3.387-0.113\n\t\t\t\t\t\t\t\tc14.288-0.952,27.628-7.9,36.599-19.062c0.233-0.289,0.455-0.584,0.672-0.885l98.799-138.006\n\t\t\t\t\t\t\t\tC514.247,344.97,512.183,332.5,503.217,326.082z"
-                          }
-                        })
-                      ])
+                      _c("path", {
+                        attrs: {
+                          d:
+                            "M245.333,85.333c-41.173,0-74.667,33.493-74.667,74.667s33.493,74.667,74.667,74.667S320,201.173,320,160\n\t\t\t\t\t\t\tC320,118.827,286.507,85.333,245.333,85.333z M245.333,213.333C215.936,213.333,192,189.397,192,160\n\t\t\t\t\t\t\tc0-29.397,23.936-53.333,53.333-53.333s53.333,23.936,53.333,53.333S274.731,213.333,245.333,213.333z"
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("g", [
+                    _c("g", [
+                      _c("path", {
+                        attrs: {
+                          d:
+                            "M394.667,170.667c-29.397,0-53.333,23.936-53.333,53.333s23.936,53.333,53.333,53.333S448,253.397,448,224\n\t\t\t\t\t\t\tS424.064,170.667,394.667,170.667z M394.667,256c-17.643,0-32-14.357-32-32c0-17.643,14.357-32,32-32s32,14.357,32,32\n\t\t\t\t\t\t\tC426.667,241.643,412.309,256,394.667,256z"
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("g", [
+                    _c("g", [
+                      _c("path", {
+                        attrs: {
+                          d:
+                            "M97.515,170.667c-29.419,0-53.333,23.936-53.333,53.333s23.936,53.333,53.333,53.333s53.333-23.936,53.333-53.333\n\t\t\t\t\t\t\tS126.933,170.667,97.515,170.667z M97.515,256c-17.643,0-32-14.357-32-32c0-17.643,14.357-32,32-32c17.643,0,32,14.357,32,32\n\t\t\t\t\t\t\tC129.515,241.643,115.157,256,97.515,256z"
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("g", [
+                    _c("g", [
+                      _c("path", {
+                        attrs: {
+                          d:
+                            "M245.333,256c-76.459,0-138.667,62.208-138.667,138.667c0,5.888,4.779,10.667,10.667,10.667S128,400.555,128,394.667\n\t\t\t\t\t\t\tc0-64.704,52.629-117.333,117.333-117.333s117.333,52.629,117.333,117.333c0,5.888,4.779,10.667,10.667,10.667\n\t\t\t\t\t\t\tc5.888,0,10.667-4.779,10.667-10.667C384,318.208,321.792,256,245.333,256z"
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("g", [
+                    _c("g", [
+                      _c("path", {
+                        attrs: {
+                          d:
+                            "M394.667,298.667c-17.557,0-34.752,4.8-49.728,13.867c-5.013,3.072-6.635,9.621-3.584,14.656\n\t\t\t\t\t\t\tc3.093,5.035,9.621,6.635,14.656,3.584C367.637,323.712,380.992,320,394.667,320c41.173,0,74.667,33.493,74.667,74.667\n\t\t\t\t\t\t\tc0,5.888,4.779,10.667,10.667,10.667c5.888,0,10.667-4.779,10.667-10.667C490.667,341.739,447.595,298.667,394.667,298.667z"
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("g", [
+                    _c("g", [
+                      _c("path", {
+                        attrs: {
+                          d:
+                            "M145.707,312.512c-14.955-9.045-32.149-13.845-49.707-13.845c-52.928,0-96,43.072-96,96\n\t\t\t\t\t\t\tc0,5.888,4.779,10.667,10.667,10.667s10.667-4.779,10.667-10.667C21.333,353.493,54.827,320,96,320\n\t\t\t\t\t\t\tc13.675,0,27.029,3.712,38.635,10.752c5.013,3.051,11.584,1.451,14.656-3.584C152.363,322.133,150.741,315.584,145.707,312.512z"
+                        }
+                      })
                     ])
                   ])
                 ]
@@ -38091,7 +38164,8 @@ var render = function() {
           _c(
             "router-link",
             {
-              staticClass: "h-full border-white flex items-center border-b-2",
+              staticClass:
+                "w-32 justify-center  h-full hover-icon border-white flex items-center border-b-2",
               attrs: { to: "/" }
             },
             [
@@ -38105,38 +38179,46 @@ var render = function() {
           _c(
             "router-link",
             {
-              staticClass: "h-full border-white flex items-center border-b-2",
+              staticClass:
+                "w-32 justify-center  h-full hover-icon border-white flex items-center border-b-2",
               attrs: { to: "/" }
             },
             [
               _c(
                 "svg",
                 {
-                  staticStyle: {
-                    "enable-background": "new 0 0 469.333 469.333",
-                    width: "32px"
-                  },
+                  staticStyle: { width: "32px" },
                   attrs: {
-                    version: "1.1",
-                    id: "Capa_1",
                     xmlns: "http://www.w3.org/2000/svg",
-                    "xmlns:xlink": "http://www.w3.org/1999/xlink",
-                    x: "0px",
-                    y: "0px",
-                    viewBox: "0 0 469.333 469.333",
-                    "xml:space": "preserve"
+                    viewBox: "0 0 512 512"
                   }
                 },
                 [
                   _c("g", [
-                    _c("g", [
-                      _c("path", {
-                        attrs: {
-                          d:
-                            "M426.667,42.667h-384C19.093,42.667,0,61.76,0,85.333v256C0,364.907,19.093,384,42.667,384h106.667v42.667H320V384\n\t\t\t\t\t\t\th106.667c23.573,0,42.453-19.093,42.453-42.667l0.213-256C469.333,61.76,450.24,42.667,426.667,42.667z M426.667,341.333h-384\n\t\t\t\t\t\t\tv-256h384V341.333z"
-                        }
-                      })
-                    ])
+                    _c("path", {
+                      attrs: {
+                        d:
+                          "M426.08,70.95C380.61,30.36,320.2,8,256,8S131.39,30.36,85.92,70.95C40.19,111.78,15,166.13,15,224c0,45.95,15.8,89.66,45.74,126.64L33.14,494.49a8,8,0,0,0,11.41,8.68l144.58-71.6A266.9,266.9,0,0,0,256,440c64.2,0,124.61-22.36,170.08-62.95C471.81,336.22,497,281.87,497,224S471.81,111.78,426.08,70.95ZM256,424a250.962,250.962,0,0,1-65.64-8.65,7.982,7.982,0,0,0-5.64.55L51.89,481.68,77.16,349.97a8.012,8.012,0,0,0-1.73-6.65C46.36,308.64,31,267.38,31,224,31,113.72,131.93,24,256,24s225,89.72,225,200S380.07,424,256,424Z"
+                      }
+                    }),
+                    _c("path", {
+                      attrs: {
+                        d:
+                          "M257,248a24,24,0,1,1,24-24A24.028,24.028,0,0,1,257,248Zm0-32a8,8,0,1,0,8,8A8.009,8.009,0,0,0,257,216Z"
+                      }
+                    }),
+                    _c("path", {
+                      attrs: {
+                        d:
+                          "M177,248a24,24,0,1,1,24-24A24.028,24.028,0,0,1,177,248Zm0-32a8,8,0,1,0,8,8A8.009,8.009,0,0,0,177,216Z"
+                      }
+                    }),
+                    _c("path", {
+                      attrs: {
+                        d:
+                          "M337,200a24,24,0,1,0,24,24A24.032,24.032,0,0,0,337,200Zm0,32a8,8,0,1,1,8-8A8.011,8.011,0,0,1,337,232Z"
+                      }
+                    })
                   ])
                 ]
               )
@@ -38146,7 +38228,8 @@ var render = function() {
           _c(
             "router-link",
             {
-              staticClass: "h-full border-white flex items-center border-b-2",
+              staticClass:
+                "w-32 justify-center h-full hover-icon border-white flex items-center border-b-2",
               attrs: { to: "/" }
             },
             [
@@ -38790,9 +38873,11 @@ var render = function() {
     [
       _c("NewPost"),
       _vm._v(" "),
-      _vm._l(_vm.posts.data, function(post) {
-        return _c("Post", { key: post.data.post_id, attrs: { post: post } })
-      })
+      _vm.loading
+        ? _c("p", [_vm._v("Loading posts...")])
+        : _vm._l(_vm.posts.data, function(post) {
+            return _c("Post", { key: post.data.post_id, attrs: { post: post } })
+          })
     ],
     2
   )
@@ -54610,8 +54695,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/macintoshhd/Desktop/soure/facebook/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/macintoshhd/Desktop/soure/facebook/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/macintoshhd/Desktop/facebook/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/macintoshhd/Desktop/facebook/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

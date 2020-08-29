@@ -12,7 +12,9 @@ a {
 	text-decoration: none;
 }
 /*~~~*/
-
+::-webkit-scrollbar { 
+    display: none; 
+}
 .box_image {
 	position: relative;
     overflow: hidden;
