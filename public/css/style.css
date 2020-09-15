@@ -24,8 +24,14 @@ a {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+}
+.box_image.posts-img {
     padding-top: 85%;
 }
+.box_image.profile-img {
+    padding-top: 45%;
+}
+
 .box_image img.image {
 	position: absolute;
     left: 0;

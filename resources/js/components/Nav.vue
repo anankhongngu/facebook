@@ -112,7 +112,7 @@
 			</router-link>
 
 			<!-- profile image -->
-			<router-link to="/" class="w-32 justify-center  h-full hover-icon border-white flex items-center border-b-2">
+			<router-link :to="'/users/' +authUser.data.user_id" class="w-32 justify-center  h-full hover-icon border-white flex items-center border-b-2">
 				
 				<img src="/assets/image/trinh.png" alt="Proflie image" class ="w-10 h-10 object-cover rounded-full">
 
@@ -223,8 +223,20 @@
 
 <script>
 	
+	
+	import { mapGetters } from 'vuex';
+
 	export default {	
 		name:'Nav',
+
+
+		computed: {
+			...mapGetters({
+				authUser: 'authUser'
+			})
+		}
+
+		//vuex
 	}
 
 </script>

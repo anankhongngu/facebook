@@ -25,7 +25,7 @@
 		</div>
 
 
-		<div class ="w-full box_image" v-if ="post.data.attributes.image">
+		<div class ="w-full box_image posts-img" v-if ="post.data.attributes.image">
 			<img class="image" :src="post.data.attributes.image" :alt="post.data.attributes.body" >
 		</div>
 

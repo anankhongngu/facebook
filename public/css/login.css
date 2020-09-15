@@ -368,7 +368,14 @@ a.txt1:hover {
 .input-checkbox100:checked + .label-checkbox100::before {
   color: #6675df;
 }
-
+.box-error {
+    margin: 10px 0;
+}
+.box-error strong {
+    font-style: italic;
+    font-weight: 200;
+    color: #ff4040;
+}
 /*------------------------------------------------------------------
 [ Button ]*/
 .container-login100-form-btn {

@@ -10,7 +10,7 @@
 				<router-view></router-view>
 			</div>
 
-		<SidebarRight />
+			<SidebarRight />
 
 		</div>
 	</div>
@@ -24,11 +24,25 @@
 	
 	export default {
 		name: "App",
-
+		
 		components: {
 			Nav,
 			Sidebar,
 			SidebarRight
+		},
+
+		mounted() {
+			this.$store.dispatch('fetchAuthUser');
+		},
+
+		created() {
+			this.$store.dispatch('setPageTitle', this.$route.meta.title);
+		},
+
+		watch: {
+			$route(to, from) {
+				this.$store.dispatch('setPageTitle', to.meta.title);
+			}
 		}
 	}
 
