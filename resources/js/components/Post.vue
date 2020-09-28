@@ -1,14 +1,19 @@
 <template>
 	
-	<div class=" bg-white rounded-lg shadow w-9/12 mt-6 overflow-auto">
+	<div class=" bg-white rounded-lg shadow w-full mt-6 overflow-auto">
 		<div class ="flex flex-col p-4">
 			<div class ="flex items-center">
 				<div class ="w-8">
-					<img src="/assets/image/trinh.png" alt="Proflie image" class ="w-8 h-8 object-cover rounded-full">
+					<router-link :to="'/users/' +authUser.data.user_id">
+						<img src="/assets/image/trinh.png" alt="Proflie image" class ="w-8 h-8 object-cover rounded-full">
+					</router-link>
 				</div>
 				<div class="ml-2">
 					<div class ="text-sm font-bold">
-						{{ post.data.attributes.posted_by.data.attributes.name }}
+						<!-- :to="'/users/' +authUser.data.user_id" -->
+						<router-link :to="'/users/' +authUser.data.user_id">
+							{{ post.data.attributes.posted_by.data.attributes.name }}
+						</router-link>
 					</div>
 					<div class="text-sm">{{ post.data.attributes.posted_at }}</div>
 				</div>
@@ -114,13 +119,24 @@
 
 <script>
 	
+
+	import { mapGetters } from 'vuex';
+	
+
 	export default {
 		name: 'Post',
 
 
 		props: [
 			'post'
-		]
+		],
+
+
+		computed: {
+			...mapGetters({
+				authUser: 'authUser'
+			})
+		}
 	}
 
 </script>

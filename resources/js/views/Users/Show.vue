@@ -17,10 +17,14 @@
 				</div>
 			</div>
 		</div>
-		<p v-if="postLoading">Loading posts...</p>	
-		<Post v-else v-for ="post in posts.data" :key="post.data.post_id" :post="post"/>
-		
-		<p v-if="! postLoading && posts.data.length < 1" class="mt-4">No posts found. Get started...</p>
+
+		<div class="sm:w-5/6 md:w-3/4 w-2/4">
+			<!-- show post with user -->
+			<p v-if="postLoading">Loading posts...</p>	
+			<Post v-else v-for ="post in posts.data" :key="post.data.post_id" :post="post"/>
+			
+			<p v-if="! postLoading && posts.data.length < 1" class="mt-4">No posts found. Get started...</p>
+		</div>
 	</div>
 	
 </template>

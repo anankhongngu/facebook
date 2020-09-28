@@ -4,13 +4,13 @@
 		<Nav />
 
 		<div class ="flex overflow-y-hidden flex-1">
-			<Sidebar />	
+			<!-- <Sidebar />	 -->
 		
-			<div class ="overflow-x-hidden w-2/4">
+			<div class ="overflow-x-hidden w-full">
 				<router-view></router-view>
 			</div>
 
-			<SidebarRight />
+			<!-- <SidebarRight /> -->
 
 		</div>
 	</div>
