@@ -1,7 +1,7 @@
 <template>
 
 	<div class="flex flex-col items-center ">
-		<div class="relative mb-10 flex justify-center">
+		<div class="relative mb-10 flex justify-center sm:w-full w-3/4">
 			<div class="w-full shadow-lg h-48 rounded-b-lg overflow-hidden z-10">
 				 <img src="/assets/admin/background-profile.jpg" alt ="Background Profile" class="h-full rounded-b-lg object-cover w-full">
 			</div>

@@ -39059,26 +39059,30 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "flex flex-col items-center " }, [
-    _c("div", { staticClass: "relative mb-10 flex justify-center" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "absolute flex flex-col justify-center items-center bottom-0 left-50 -mb-12 z-20"
-        },
-        [
-          _vm._m(1),
-          _vm._v(" "),
-          _c("div", { staticClass: "text-center" }, [
-            _c("p", { staticClass: "text-3xl font-semibold text-black" }, [
-              _vm._v(_vm._s(_vm.user.data.attributes.name))
+    _c(
+      "div",
+      { staticClass: "relative mb-10 flex justify-center sm:w-full w-3/4" },
+      [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "absolute flex flex-col justify-center items-center bottom-0 left-50 -mb-12 z-20"
+          },
+          [
+            _vm._m(1),
+            _vm._v(" "),
+            _c("div", { staticClass: "text-center" }, [
+              _c("p", { staticClass: "text-3xl font-semibold text-black" }, [
+                _vm._v(_vm._s(_vm.user.data.attributes.name))
+              ])
             ])
-          ])
-        ]
-      )
-    ]),
+          ]
+        )
+      ]
+    ),
     _vm._v(" "),
     _c(
       "div",

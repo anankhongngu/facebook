@@ -58,10 +58,10 @@
 
 
             <div class="container-login100-form-btn">
-                <button class="login100-form-btn" type="submit">{{ __('Login') }}</button>
+                <button class="login100-form-btn " type="submit">{{ __('Login') }}</button>
             </div>
 
-            <div class="text-center p-t-46 p-b-20">
+            <div class="text-center p-t-46 p-b-20 my-3">
                 <span class="txt2">
                     or sign up using
                 </span>
